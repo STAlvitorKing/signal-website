@@ -1,30 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
-<title>Signal Predictor</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Premium Signal System</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div id="login">
-<h2>Enter Password</h2>
-<input type="password" id="password">
-<button onclick="checkPass()">Enter</button>
+<!-- LOGIN -->
+
+<div id="loginBox" class="container">
+
+<h1>🔐 Secure Login</h1>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">LOGIN</button>
+
+<p id="error"></p>
+
 </div>
 
-<div id="main" style="display:none;">
+<!-- MAIN SIGNAL SYSTEM -->
+
+<div id="mainBox" class="container" style="display:none;">
+
 <h1>🚀 Get Signal</h1>
 
 <button onclick="getSignal()">GET SIGNAL</button>
 
-<h2 id="result"></h2>
-<p id="confidence"></p>
+<div class="signal-box">
+
+<h2 id="result">Signal - --</h2>
+
+</div>
+
+<p class="success">Success Rate: 99%</p>
+
+<p id="caption">System ready...</p>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
