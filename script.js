@@ -1,17 +1,31 @@
-const correctPassword = "shahed";
+const password = "avlFUCK";
 
-function checkPass(){
+const captions = [
 
-let pass = document.getElementById("password").value;
+"System scanning...",
+"Encrypted signal detected...",
+"AI engine running...",
+"Market analysis active...",
+"Secure signal generated...",
+"Crypto system online...",
+"Algorithm calculating...",
+"Prediction engine ready..."
 
-if(pass === correctPassword){
+];
 
-document.getElementById("login").style.display="none";
-document.getElementById("main").style.display="block";
+function login(){
+
+let input = document.getElementById("password").value;
+
+if(input === password){
+
+document.getElementById("loginBox").style.display="none";
+
+document.getElementById("mainBox").style.display="block";
 
 }else{
 
-alert("Wrong Password");
+document.getElementById("error").innerText="Wrong Password";
 
 }
 
@@ -19,12 +33,33 @@ alert("Wrong Password");
 
 function getSignal(){
 
-let num = Math.floor(Math.random()*1000)+1;
+let rand = Math.random();
+let value;
+
+if(rand < 0.85){
+
+value = Math.floor(Math.random()*5)+1;
+
+}
+
+else if(rand < 0.97){
+
+value = Math.floor(Math.random()*15)+6;
+
+}
+
+else{
+
+value = Math.floor(Math.random()*80)+20;
+
+}
 
 document.getElementById("result").innerText =
-"Signal - " + num + "x";
+"Signal - " + value + "x";
 
-document.getElementById("confidence").innerText =
-"Success Rate: 99%";
+let caption =
+captions[Math.floor(Math.random()*captions.length)];
+
+document.getElementById("caption").innerText = caption;
 
 }
